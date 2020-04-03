@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="POST" action="/edit_tutor/?nid={{data.id}}">
+
+        <p>编辑信息:<input type="text" name="rolename" value="{{data.rolename}}">
+                    <input type="text" name="username" value="{{data.username}}">
+                    <input type="text" name="password" value="{{data.password}}">
+        <input type="submit" value="提交">
+        </p>
+    </form>
+</body>
+</html>

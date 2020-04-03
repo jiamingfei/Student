@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/commons.css/" />
+
+</head>
+<body>
+
+<div class="border">
+    <div class="border1"><h2>人员档案</h2></div>
+     <div class="border2">
+    <table >
+        <thead>
+            <tr>
+                <th>角色</th>
+                <th >账号</th>
+                <th >密码</th>
+                <th >操作</th>
+                <th ><div class="border3"><a href="/add_tutor/">添加</a></div></th>
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in data %}
+            <tr>
+                <td >{{ row.rolename}}</td>
+                <td >{{ row.username}}</td>
+                <td >{{ row.password}}</td>
+                <td><a href="/del_tutor/?nid={{ row.id }} ">删除</a>
+                    <a href="/edit_tutor/?nid={{ row.id }}">编辑</a>
+                </td>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+     </div>
+</div>
+</body>
+</html>
